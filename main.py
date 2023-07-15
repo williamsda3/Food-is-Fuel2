@@ -28,12 +28,12 @@ number = input('Number of recipe suggestions \n>> ')
 
 # Creating an array to hold the ingredients
 ingredients = []
+finished = False
 
-
-recipe1 = input('Enter a desired ingredient: \n>> ')
-recipe2 = input('Enter a desired ingredient: \n>> ')
-
-ingredients.append(recipe1)
-ingredients.append(recipe2)
-
+while not finished:
+    recipe1 = input('Enter a desired ingredient: (Enter 0 to exit)\n>> ')
+    if recipe1 == '0':
+        finished = True
+    else: 
+        ingredients.append(recipe1)
 get_recipe_suggestions(ingredients)
